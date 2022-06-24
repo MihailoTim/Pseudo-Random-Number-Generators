@@ -19,6 +19,9 @@ For the script to run following things are needeed:
 2. Matplotlib
 3. Numpy   
   
-Install python, then get needed libraries using `pip` package installer with `pip install matplotlib numpy` 
+Install python, then get needed libraries using `pip` package installer with `pip install matplotlib numpy` .
 
 ## Results
+Below you can see the results from all 4 plots. All generators were parametrized well and by recommendation from different sources, so density and sparsity are on par 
+with a benchmark generator that is being used. You can fiddle with different parameter values and see how the results changes. 
+![alt text](https://github.com/MihailoTim/Pseudo-Random-Number-Generators/blob/master/results/regular_plot.png "Result")
