@@ -1,8 +1,8 @@
 from rng import RNG
 from exceptions import InvalidValue
-from datetime import datetime
 import time
 
+#Linear Congruential Generator
 class LCG(RNG):
 
     #criteria for parameter selection:
@@ -11,6 +11,9 @@ class LCG(RNG):
     #if m is multiple of 4, then a-1 is multiple of 4
     #predefined values for moduo, increment and multiplier are based on Donald Knuth's recommendations
     def __init__(self, seed = int(time.time()), moduo = 4294967296, increment = 907633385, multiplier = 429493445):
+
+        RNG.__init__(self, seed)
+
         if(moduo < seed or  moduo < increment or moduo < multiplier):
             raise InvalidValue("moduo")
         if(seed < 0):
@@ -70,7 +73,7 @@ class LCG(RNG):
     def __randomArray(self, size):
         array = []
         for i in range(size):
-            array.append(self.random())
+            array.append(self.__randomOne())
         return array
 
     def __randomOne(self):
